@@ -3,10 +3,10 @@ services:
     name: api-monitoring-backend
     env: node
     buildCommand: npm install && npm run build
-    startCommand: npm run start:prod
+    startCommand: npm run start:dev
     envVars:
       - key: NODE_ENV
-        value: production
+        value: development
       - key: MONGODB_URI
         sync: false  # Set in Render dashboard
       - key: PORT
