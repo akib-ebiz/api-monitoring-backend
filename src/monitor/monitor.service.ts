@@ -58,6 +58,7 @@ export class MonitorService {
       });
       
       this.logger.error(`❌ ${api.name} - failed (${responseTime}ms): ${error.message}`);
+      console.error(error);
     }
   }
 
