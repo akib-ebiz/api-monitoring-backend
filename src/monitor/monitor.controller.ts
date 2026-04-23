@@ -8,6 +8,8 @@ export class MonitorController {
 
   @Post('check/:apiId')
   async checkNow(@Param('apiId') apiId: string): Promise<Log> {
+    console.log('checkNow', apiId);
+    console.log('this.monitorService', this.monitorService);
     return this.monitorService.checkApiNow(apiId);
   }
 }
